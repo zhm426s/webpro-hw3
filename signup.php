@@ -19,9 +19,12 @@
                 </div>
                 <div class="form-item">
                     <label for="gender">Gender: </label>
-                    <input type="radio" name="gender" id="male" value="Male">
-                    <input type="radio" name="gender" id="female" value="Female" required>
-                    <input type="radio" name="gender" id="non-binary" value="Non-Binary">
+                    <input type="radio" name="gender" id="male" value="M">
+                    <label for="gender">Male</label>
+                    <input type="radio" name="gender" id="female" value="F" required>
+                    <label for="gender">Female</label>
+                    <input type="radio" name="gender" id="non-binary" value="X">
+                    <label for="gender">Non-Binary</label>
                 </div>
                 <div class="form-item">
                     <label for="age">Age: </label>
@@ -41,8 +44,8 @@
                     </select>
                 </div>
                 <div class="form-item">
-                    <label for="seeking">Seeking Gender(s): </label>
-                    <select name="seeking" id="seeking" multiple>
+                    <label for="seeking[]">Seeking Gender(s): </label>
+                    <select name="seeking[]" id="seeking" multiple>
                         <option value="Male" required>Male</option>
                         <option value="Female">Female</option>
                         <option value="Non-Binary">Non-Binary</option>
@@ -54,7 +57,7 @@
                     <input type="text" name="maxage" id="maxage" size="6" maxlength="2" required>
                 </div>
                 <input class="form-action" type="submit" value="Sign Up!">
-                <input class="form-action" type="clear" value="Clear Form">
+                <input class="form-action" type="reset" value="Clear Form">
             </form>
         </main>
         <footer>
