@@ -18,7 +18,7 @@
                     <input type="text" name="name" id="name" size="16" required>
                 </div>
                 <input class="form-action" type="submit" value="View Matches!">
-                <input class="form-action" type="clear" value="Clear Form">
+                <input class="form-action" type="reset" value="Clear Form">
             </form>
         </main>
         <footer>
