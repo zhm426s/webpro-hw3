@@ -1,14 +1,4 @@
 <?php
-    function genderConvert($string) {
-        if ($string === "Male") {
-            return "M";
-        } elseif ($string === "Female") {
-            return "F";
-        } else {
-            return "X";
-        }
-    }
-
     function mainContent($mainStatus, $fullLine, $name) {
         if ($mainStatus === "EmptyError") {
             echo "<h3 class=\"submit-message\">Error</h3> <br><p>The form was not filled out completely. Please go back and fill out all fields.</p>";
@@ -26,13 +16,13 @@
     $age = (int)htmlspecialchars($_POST['age']);
     $type = htmlspecialchars($_POST['type']);
     $os = htmlspecialchars($_POST['os']);
-    $seeking = htmlspecialchars($_POST['seeking']);
+    $seeking = $_POST['seeking'];
     if (!is_array($seeking)) {
-        $seeking = genderConvert([$seeking]);
+        $seeking = [$seeking];
     } else {
         $cseeking = array();
         foreach ($seeking as $sgender) {
-            $cseeking[] = genderConvert($sgender);
+            $cseeking[] = $sgender;
         }
         $seeking = implode('', $seeking);
     }

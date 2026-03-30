@@ -46,9 +46,9 @@
                 <div class="form-item">
                     <label for="seeking[]">Seeking Gender(s): </label>
                     <select name="seeking[]" id="seeking" multiple>
-                        <option value="Male" required>Male</option>
-                        <option value="Female">Female</option>
-                        <option value="Non-Binary">Non-Binary</option>
+                        <option value="M" required>Male</option>
+                        <option value="F">Female</option>
+                        <option value="X">Non-Binary</option>
                     </select>
                 </div>
                 <div class="form-item">
