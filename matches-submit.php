@@ -7,8 +7,8 @@
         } else {
             echo "<h3 class=\"submit-message\">Matches for $name</h3> <br>";
             foreach ($matches as $match) {
-                echo "<div class=\"match\"><img class=\"user-img\" src=\"user.jpg\" alt=\"Default user\">
-                <h4 class=\"user-name\">$match[0]</h4><ul class=\"info-items\"><li>gender:</li><li>age:</li><li>type:</li><li>OS:</li></ul>
+                echo "<div class=\"match\"><img src=\"user.jpg\" alt=\"Default user\">
+                <p>$match[0]</p><ul class=\"info-items\"><li>gender:</li><li>age:</li><li>type:</li><li>OS:</li></ul>
                 <ul class=\"user-info\"><li>$match[1]</li><li>$match[2]</li><li>$match[3]</li><li>$match[4]</li></ul>
                 </div>";
             }
@@ -58,7 +58,7 @@
     <head>
         <title>NerdLuv Signup</title>
         <meta charset="UTF-8">
-        <meta rel="stylesheet" href="nerdluv.css">
+        <link rel="stylesheet" href="nerdieluv.css">
     </head>
     <body>
         <header>

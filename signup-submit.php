@@ -47,7 +47,7 @@
     <head>
         <title>NerdLuv Signup</title>
         <meta charset="UTF-8">
-        <meta rel="stylesheet" href="nerdluv.css">
+        <link rel="stylesheet" href="nerdieluv.css">
     </head>
     <body>
         <header>

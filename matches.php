@@ -3,7 +3,7 @@
     <head>
         <title>NerdLuv Log In</title>
         <meta charset="UTF-8">
-        <meta rel="stylesheet" href="nerdluv.css">
+        <link rel="stylesheet" href="nerdieluv.css">
     </head>
     <body>
         <header>
@@ -11,7 +11,8 @@
             <h2>where meek geeks meet</h2>
         </header>
         <main>
-            <h3 class="form-title">Returning User</h3>
+            <legend>Returning User</legend>
+            <fieldset>
             <form action="matches-submit.php" method="get">
                 <div class="form-item">
                     <label for="name">Name: </label>
@@ -20,6 +21,7 @@
                 <input class="form-action" type="submit" value="View Matches!">
                 <input class="form-action" type="reset" value="Clear Form">
             </form>
+            </fieldset>
         </main>
         <footer>
             <p id="footer-info">

@@ -19,7 +19,7 @@ Ellen Ripley,F,35,ESFJ,Linux,20,40,F
 Frances Allen,F,78,ESTP,Linux,67,78,M
 Gordon Moore,M,81,ENFP,Windows,60,99,MF
 Grace Hopper,F,87,ISFP,Windows,47,80,M
-Jadzia Dax,X,46,ENFJ,Mac OS X,18,32,MFX
+Jadzia Dax,F,46,ENFJ,Mac OS X,18,32,MFX
 James Gosling,M,55,ESFJ,Linux,18,40,F
 Jeannette Wing,F,38,INTP,Mac OS X,45,60,M
 Kathryn Janeway,F,49,ESTJ,Windows,30,55,FX
