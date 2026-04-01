@@ -1,4 +1,7 @@
 <?php
+    // this file gets input of a name and sends it to matches-submit.php
+    // note that I am including extra #3: LGBT matches
+    
     include ('common.php');
 ?>
 
@@ -7,6 +10,7 @@
 <?=$head1?>
 <?=$header?>
     <main>
+        <!--main content: display form for a returning user to get matches-->
         <legend>Returning User</legend>
         <fieldset>
         <form action="matches-submit.php" method="get">

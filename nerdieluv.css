@@ -62,6 +62,13 @@ h1 {
 	margin-top: 0em;
 }
 
+.info-items {
+	font-weight: bold;
+	float: left;
+	width: 11em;
+	margin-top: 0em;
+}
+
 input[type="submit"], input[type="reset"] {
 	background-color: #FAA;
 	font-size: 120%;
