@@ -1,17 +1,33 @@
 <?php
+    include ('common.php');
+
     function mainContent($mainStatus, $matches, $name) {
         if ($mainStatus === "NoAccError") {
-            echo "<h3 class=\"submit-message\">Error</h3> <br><p>Your profile was not found. Please go back and check the spelling or make a new account.</p>";
+            return "<h3 class=\"submit-message\">Error</h3> <br>
+                <p>Your profile was not found. Please go back and check the spelling or make a new account.</p>";
         } elseif ($mainStatus === "NoMatchesError") {
-            echo "<h3 class=\"submit-message\">Matches for $name</h3> <br><p>No matches found. Check back later to see if anyone new joins!</p>";
+            return"<h3 class=\"submit-message\">Matches for $name</h3> <br>
+                <p>No matches found. Check back later to see if anyone new joins!</p>";
         } else {
-            echo "<h3 class=\"submit-message\">Matches for $name</h3> <br>";
+            $returnString = "<h3 class=\"submit-message\">Matches for $name</h3> <br>";
             foreach ($matches as $match) {
-                echo "<div class=\"match\"><img src=\"user.jpg\" alt=\"Default user\">
-                <p>$match[0]</p><ul class=\"info-items\"><li>gender:</li><li>age:</li><li>type:</li><li>OS:</li></ul>
-                <ul class=\"user-info\"><li>$match[1]</li><li>$match[2]</li><li>$match[3]</li><li>$match[4]</li></ul>
-                </div>";
+                $returnString = $returnString . "<div class=\"match\"><img src=\"user.jpg\" alt=\"Default user\">
+                    <p>$match[0]</p>
+                    <ul class=\"info-items\">
+                        <li>gender:</li>
+                        <li>age:</li>
+                        <li>type:</li>
+                        <li>OS:</li>
+                    </ul>
+                    <ul class=\"user-info\">
+                        <li>$match[1]</li>
+                        <li>$match[2]</li>
+                        <li>$match[3]</li>
+                        <li>$match[4]</li>
+                    </ul>
+                    </div>";
             }
+            return $returnString;
         }
     }
 
@@ -53,32 +69,11 @@
         $mainStatus = "NoMatchesError";
     }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>NerdLuv Signup</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="nerdieluv.css">
-    </head>
-    <body>
-        <header>
-            <h1 id="title">nerdLuv™</h1>
-            <h2>where meek geeks meet</h2>
-        </header>
-        <main>
-            <?php mainContent($mainStatus, $matches, $name);?>
-        </main>
-        <footer>
-            <p id="footer-info">
-                This page is for single nerds to meet and date each other! <br>
-                Type in your personal information and wait for the nerdly luv to begin!<br>
-                Thank you for using our site.
-            </p>
-            <p id="copyright">Results and page © Copyright NerdLuv Inc.</p>
-            <a class="button" id="back-button" href="index.php">
-                <img src="back-button.png" alt="Back arrow icon">
-                <p>Back to Home Page</p>
-            </a>
-        </footer>
-    </body>
-</html>
+<?=$head0?>
+    <title>NerdLuv Matches for <?=$name?></title>
+<?=$head1?>
+<?=$header?>
+    <main>
+        <?=mainContent($mainStatus, $matches, $name)?>
+    </main>
+<?=$footer?>

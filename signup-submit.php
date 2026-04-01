@@ -1,13 +1,18 @@
 <?php
+    include ('common.php');
+
     function mainContent($mainStatus, $fullLine, $name) {
         if ($mainStatus === "EmptyError") {
-            echo "<h3 class=\"submit-message\">Error</h3> <br><p>The form was not filled out completely. Please go back and fill out all fields.</p>";
+            return "<h3 class=\"submit-message\">Error</h3> <br>
+                <p>The form was not filled out completely. Please go back and fill out all fields.</p>";
         } elseif ($mainStatus === "AgeError") {
-            echo "<h3 class=\"submit-message\">Error</h3> <br><p>Teens under 18 are not allowed on NerdLuv. Please go back and edit your information.</p>";
+            return "<h3 class=\"submit-message\">Error</h3> <br>
+                <p>Teens under 18 are not allowed on NerdLuv. Please go back and edit your information.</p>";
         } else {
             file_put_contents('singles.txt', $fullLine, FILE_APPEND);
-            echo "<h3 class=\"submit-message\">Thank you!</h3> <br><p>Welcome to NerdLuv, $name!</p><br>";
-            echo "<a class=\"button\" id=\"matches\" href=\"matches.php\"><img src=\"heart.png\" alt=\"Heart icon\"><p>Now, Log In to see your matches!</p></a>";
+            return "<h3 class=\"submit-message\">Thank you!</h3> <br><p>Welcome to NerdLuv, $name!</p><br>
+                <a class=\"button\" id=\"matches\" href=\"matches.php\"><img src=\"heart.png\" alt=\"Heart icon\">
+                <p>Now, Log In to see your matches!</p></a>";
         }
     }
     
@@ -42,32 +47,11 @@
     }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>NerdLuv Signup</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="nerdieluv.css">
-    </head>
-    <body>
-        <header>
-            <h1 id="title">nerdLuv™</h1>
-            <h2>where meek geeks meet</h2>
-        </header>
-        <main>
-            <?php mainContent($mainStatus, $fullLine, $name);?>
-        </main>
-        <footer>
-            <p id="footer-info">
-                This page is for single nerds to meet and date each other! <br>
-                Type in your personal information and wait for the nerdly luv to begin!<br>
-                Thank you for using our site.
-            </p>
-            <p id="copyright">Results and page © Copyright NerdLuv Inc.</p>
-            <a class="button" id="back-button" href="index.php">
-                <img src="back-button.png" alt="Back arrow icon">
-                <p>Back to Home Page</p>
-            </a>
-        </footer>
-    </body>
-</html>
+<?=$head0?>
+    <title>NerdLuv Signup for <?=$name?></title>
+<?=$head1?>
+<?=$header?>
+    <main>
+        <?=mainContent($mainStatus, $fullLine, $name)?>
+    </main>
+<?=$footer?>
