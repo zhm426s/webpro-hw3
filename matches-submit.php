@@ -33,8 +33,8 @@
 
     $matches = array();
     foreach ($singlesData as $single) {
-        if ($single[0] !== $userData[0] && in_array($single[1], mb_str_split($userData[5])) && in_array($userData[1], mb_str_split($single[5]))){
-            if ((int)$single[2] <= (int)$userData[7] && (int)$single[2] >= (int)$userData[6] && (int)$userData[2] <= (int)$single[7] && (int)$userData[2] >= (int)$single[6]){
+        if ($single[0] !== $userData[0] && in_array($single[1], mb_str_split($userData[7])) && in_array($userData[1], mb_str_split($single[7]))){
+            if ((int)$single[2] <= (int)$userData[6] && (int)$single[2] >= (int)$userData[5] && (int)$userData[2] <= (int)$single[6] && (int)$userData[2] >= (int)$single[5]){
                 if($single[4] === $userData[4]){
                     $i;
                     for ($i=0; $i<4; $i++){
