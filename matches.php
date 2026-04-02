@@ -11,16 +11,16 @@
 <?=$header?>
     <main>
         <!--main content: display form for a returning user to get matches-->
-        <legend>Returning User</legend>
         <fieldset>
-        <form action="matches-submit.php" method="get">
-            <div class="form-item">
-                <label for="name">Name: </label>
-                <input type="text" name="name" id="name" size="16" required>
-            </div>
-            <input class="form-action" type="submit" value="View Matches!">
-            <input class="form-action" type="reset" value="Clear Form">
-        </form>
+            <legend>Returning User</legend>
+            <form action="matches-submit.php" method="get">
+                <div class="form-item">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" size="16" required>
+                </div>
+                <input class="form-action" type="submit" value="View Matches!">
+                <input class="form-action" type="reset" value="Clear Form">
+            </form>
         </fieldset>
     </main>
 <?=$footer?>
